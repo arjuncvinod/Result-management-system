@@ -1,0 +1,218 @@
+:root {
+    --ui-color1:rgb(201, 89, 14);
+    --ui-color:rgb(24, 120, 255);
+    --blue:rgb(30, 144, 255)
+  }
+  *{
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+  body{
+    margin: 0;
+    height: 100vh;
+    font-family: 'Be Vietnam Pro','Times New Roman';
+  }
+  .login-main{
+    background-color:var(--ui-color);
+    height: 86.5%;
+  }
+.container{
+    display: flex;
+    justify-content: center;
+    transform: translateY(25%);
+}
+.login-box{
+    padding: 50px;
+    background-color:transparent;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.login-wrapper{
+    width: 270px;
+    height:auto;
+    box-shadow: 0px 0px 7px rgb(168, 167, 167);
+    border-radius: 10px;
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+
+}
+.login-type-header{
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--ui-color);
+    cursor:default;
+}
+.login-type-header span{
+    display: inline-block;
+    width: 250px;
+    height: auto;
+    background-color: var(--ui-color);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding-top: 3px;
+    padding-bottom:6px;
+}
+
+:focus-visible{
+    outline: none;
+}
+.form-container{
+    display: flex;
+    justify-content: center;
+    margin-top:5%;
+
+}
+.form{
+    margin-top:0;
+    display: grid;
+    
+}
+.select-box-container{
+    display: flex;
+    justify-content: center;
+}
+.select-box-container span{
+    height: 30px;
+    color:rgb(107, 105, 105);  
+    font-size: 18px; 
+    padding-top: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#login-type{
+    height: 30px;
+    width: 80px;
+    border: none;
+    font-family: 'Times New Roman';
+    font-size: 18px;
+    background-color: transparent;
+    color: var(--ui-color);
+    cursor: pointer;
+
+}
+#login-type:hover{
+    color: var(--ui-color);
+}
+#login-type option{
+    color:rgb(107, 105, 105);
+    background: white;
+    outline: none;
+}
+
+.text-box{
+    background: transparent;
+    border-top:none ;
+    border-left: none;
+    border-right: none;
+    width: 250px;
+    outline: none;
+    border-color:rgb(166, 164, 164);
+    color: var(--ui-color);
+    padding-left: 1px;
+    transition: .5s;
+    font-size: 14px;
+    transition: .5s ease;
+    }
+.text-box:focus{
+    border-color:var(--ui-color) ;
+    color:rgb(47, 44, 44) ;
+}
+.text-box::placeholder{
+    color:var(--ui-color);
+    transition: .5s ease;
+}
+.text-box:focus::placeholder{
+    color:rgb(107, 105, 105) ;
+}
+.submit-container{
+    display: flex;
+    justify-content: center;
+}
+.submit-button{
+    width: 250px;
+    height: 30px;
+    border-radius: 14px;
+    background-color:var(--ui-color) ;
+    color: white;
+    border: none;
+    transition: .5s;
+    margin-top: 7%;
+    cursor: pointer;
+    transition: .5s ease;
+    font-size: 16px;
+
+}
+.submit-button:hover{
+    background-color:rgb(12, 92, 203);
+    
+}
+.submit-button:active{
+    background-color:rgb(15, 74, 156);
+}
+footer{
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background-color:var(--ui-color);
+    overflow: hidden;
+}
+footer .wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.png);
+    background-size: 1000px 100px;
+}
+.wave1{
+    animation: animate 5s linear infinite ;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+.wave2{
+    animation: animate2 15s linear infinite ;
+    z-index: 999;
+    opacity: .5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+.wave3{
+    animation: animate 8s linear infinite ;
+    z-index: 998;
+    opacity: .2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+.wave4{
+    animation: animate2 10s linear infinite ;
+    z-index: 997;
+    opacity: .7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+@keyframes animate {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+@keyframes animate2 {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: -1000px;
+    }
+}
+*{
+    font-family: 'Be Vietnam Pro', sans-serif;
+}

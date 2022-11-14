@@ -1,0 +1,359 @@
+
+:root {
+    --ui-color1:rgb(201, 89, 14);
+    --blue:rgb(30, 144, 255);
+    --font-color:rgb(24, 120, 255);
+  }
+  @keyframes color{
+    0%{
+        color: silver;
+        
+    }
+    10%{
+        color:blue;
+    }
+    20%{
+        color:green;
+    }
+    30%{
+        color: yellow;
+    }
+    40%{
+        color:cyan;
+    }
+    50%{
+        color: magenta;
+    }
+    60%{
+        color:red;
+    }
+    70%{
+        color:violet;
+    }
+    80%{
+        color:brown;
+    }
+    90%{
+        color:gold;
+    }
+    100%{
+        color:magenta;
+    }
+}
+@keyframes two-color{
+    0%{
+        color:white;
+
+    }
+    100%{
+        color: var(--font-color);
+    }
+}
+
+@keyframes login {
+        
+    0%{
+        background:linear-gradient(45deg,rgb(24, 120, 255),rgb(11, 222, 255));
+    }
+    100%{
+        background:linear-gradient(45deg,rgb(24, 120, 255),rgb(2, 31, 71));
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family:'Be Vietnam Pro','Times New Roman';
+    background-color: var(--font-color);
+    overflow-x: hidden;
+}
+
+.nav-bar{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content:space-between;
+    align-items: center;
+    background-color: var(--font-color);
+   /* background-color: rgba(0, 0, 0, 0.3);*/
+    padding-left: 10px;
+    padding-right: 30px;
+    z-index: 100;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+}
+.logo{
+    margin: 15px;
+    font-size: 28px;
+    color:white;
+    padding: 5px 10px ;
+    border: 1px solid;
+    text-align: center;
+    background-color:transparent;
+    transition: 1s ease-in-out;
+}
+
+.links{
+    width:20%;
+    display: flex;
+    justify-content: space-between;
+    right: 0;
+}
+.links a{
+    font: size 18px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px;   
+    transition: .5s ease;
+}
+.links a:hover{
+    transform: translatey(-5px);
+}
+.link-text::after{
+    position: absolute;
+    height: 2px;
+    content: '';
+    bottom:2px;
+    width: 0%;
+    background: rgb(255, 255, 255);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+/* .link-text:hover::after{
+    width: 50%;
+}
+.link-text:focus::after{
+    width: 50%;
+} */
+.main{
+    
+    display:flex;
+    text-align:initial;
+    height:100vh;
+    /*background: linear-gradient(57deg,#5c759b,#00c6a7);*/
+    background-color:white;
+
+    clip-path: ellipse(96% 76% at 8% 23%);
+    background-image: url(student.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.main-content{
+    width: 100%;
+    font-size: 100px;
+    color:var(--font-color);
+    margin:0;
+}
+.main-heading{
+    margin-top: 0;
+}
+.school-name{
+
+}
+.main-heading p{
+    color:white;
+}
+.main-heading h1{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size:30px;
+    margin-block: 0;
+    margin-left: 10px;
+    text-transform:uppercase;
+}
+.main-heading h2{
+    font-size: 18px;
+    margin-block: 0;
+    margin-left: 10px;
+    color: rgba(24, 120, 255,.9);
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.main-heading h3{
+    font-size: 6vw;
+    margin-block: 0;
+    text-transform: uppercas;
+    margin-left: 10px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    text-transform: uppercase;
+    /* letter-spacing: 15px; */
+}
+.result-text{
+    transform: scale(2);
+}
+ .login-button-container{
+     display: flex;
+     justify-content:start;
+     transform: translate(15px,-60px);
+ }
+ .result-text span:nth-of-type(1){
+    animation: color 2s infinite;
+    animation-delay: .1s; 
+ }
+ .result-text span:nth-of-type(2){
+     animation: color 2s infinite; 
+     animation-delay: .2s; 
+  }
+  .result-text span:nth-of-type(3){
+     animation: color 2s infinite;
+     animation-delay: .3s;  
+  }
+  .result-text span:nth-of-type(4){
+     animation:color 2s infinite;
+     animation-delay: .4s;  
+  }
+  .result-text span:nth-of-type(5){
+     animation: color 2s infinite;
+     animation-delay: .5s;  
+  }
+  .result-text span:nth-of-type(6){
+     animation:color 2s infinite; 
+     animation-delay: .6s; 
+  }
+  .result-text span:nth-of-type(7){
+     animation: color 2s infinite; 
+     animation-delay: .7s; 
+  }
+.login-button-container a{
+}
+.login-button{
+    padding: 10px 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius:10px;
+    border: none;
+    color:white;
+    background:linear-gradient( 45deg,rgb(24, 120, 255),rgb(11, 222, 255));
+    transition: .15s;
+    cursor: pointer;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.login-button:hover{
+    background: linear-gradient(45deg,rgb(11, 222, 255),rgb(24, 120, 255));
+    box-shadow: 0px 1px 5px rgb(169, 169, 169);
+    background-position: right;
+}
+.login-button:active{
+    padding: 10px 35px;
+}
+
+
+/*contact*/
+
+.contact-container{
+    height: 85vh;
+}
+.contact-header{
+    margin-top1: 10%;/*❌❌❌*/
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+}
+#contact{
+    display: flex;
+}
+.contact-message-container{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+.contact-message{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;   
+}
+.contact-note{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    font-family: 'Be Vietnam Pro';
+}
+
+.contact-text-box{
+    /* width: 564px; */
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border:none;
+    padding-left: 10px;
+}
+.contact-text-box::placeholder{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    letter-spacing: 1px;
+}
+.contact-textarea{
+    padding-left: 10px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    letter-spacing: 1px;
+    border: none;
+    width: 100%;
+
+
+    
+}
+.send-button-container{
+    margin-top: 5%;
+    display: flex;
+    justify-content:end;
+}
+.send-button{
+    padding: 12px 28px;
+    font-size: large;
+    border-radius: 20px ;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    letter-spacing: 1px;
+    transition: .5s;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.send-button:hover{
+    background-color: white;
+    color: var(--font-color);
+}
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    baackground-color: red;
+    width: 40%;
+    color: white;
+    font-family: 'Be Vietnam Pro';
+}
+.contact-info{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    margin-bottom: 20px;
+    
+}
+.contact-info-header{
+    margin-top: 30px;
+}
+.social-media-container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.social-media-icons{
+    color: white;
+    padding-bottom: 10px;
+}
+.social-media-icons i{
+    margin: 0px 20px;
+    font-size: 20px;
+    transition: .3s;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 40px;
+    color: white;   
+}
+.social-media-icons i:hover{
+    color: var(--font-color) ;
+    background-color: white;
+}
+

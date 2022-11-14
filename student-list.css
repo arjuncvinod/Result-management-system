@@ -1,0 +1,126 @@
+:root {
+    --ui-color1:rgb(201, 89, 14);
+    --ui-color:rgb(24, 120, 255);
+    --blue:rgb(30, 144, 255)
+  }
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Be Vietnam Pro', sans-serif
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+body{
+    background-color: white ;
+    animation: fade 1s;
+}
+#main-container{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.student-container{
+    position: absolute;
+    top: 15%;
+    width: 90%;
+    height: auto;
+    
+}
+.student-container h1{
+    text-align: center;
+    color: var(--ui-color);
+    margin-bottom: 1%;
+}
+.add-btn-container{
+    text-align: end;
+    margin-right: 2.9%;
+}
+.add-btn{
+    padding:1%;
+    background-color:#18ac31;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.add-btn:hover{
+ background-color:#14a02b;   
+}
+.add-btn:active{
+    background-color:#117b22; 
+}
+.student-grid-container{
+    height: auto;
+    display: flex;
+    flex-wrap:wrap;
+}
+.student-info{
+    display: grid;
+    background-color: rgb(253, 253, 253);
+    height: 200px;
+    width: 175px;
+    overflow: hidden;
+    margin: 1% 1.85%;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgb(171, 169, 169);
+    transition: .5s;
+    
+}
+.student-img{
+    width: 175px;
+    height: 181px;
+    object-fit:cover;
+    transition: .5s;
+}
+.student-info p{
+    font-weight: b;
+}
+.student-info a{
+    background-color:#18ac31;
+    text-decoration: none;
+    color: #ffffff;
+}
+.student-info:hover{
+    scale: 1.2;
+    box-shadow: 0px 0px 20px rgb(141, 138, 138);
+}
+.add-student{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.delete-icon{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: end;
+    font-size: 15px;
+    background-color: transparent;
+}
+.delete-icon i{
+    color:black;
+    margin: 7px;
+    position: absolute;
+}
+.delete-icon i:hover{
+    color: red;
+}
+.student-name{
+position: relative;
+top: -8px;
+font-weight: bold;
+background-color: rgb(239, 237, 237);
+height: 30px;
+padding-top: 3px;
+font-weight:normal;
+}
+

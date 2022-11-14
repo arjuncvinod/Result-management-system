@@ -1,0 +1,169 @@
+:root {
+    --ui-color1:rgb(201, 89, 14);
+    --blue:rgb(30, 144, 255);
+    --font-color:rgb(24, 120, 255);
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    font-family:'Be Vietnam Pro', sans-serif
+    }
+#result-page{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.result-container{
+    margin-top:4.5%;
+    height: 80%;
+    width: 60%;
+    background-color:rgba(255, 255, 255, 0.425);
+    border-radius:20px;
+    box-shadow: 0 0 1px rgb(95, 94, 94);
+}
+.back-btn{
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    font-size: 40px;
+    background-color: transparent;
+    border:1px solid var(--font-color);
+    color: white;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+.back-btn:hover{
+    color: var(--font-color);
+    background-color: white;
+    border:1px solid white;
+}
+.result-container h3{
+    text-align: center;
+    margin: 3%;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.94);
+}
+.semester-selection{
+    margin: 0 auto;
+    display: flex;
+    justify-content:center;
+    background-color: white;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    padding: 1% 0%;
+    width: 80%;
+}
+.semester-selection p{
+    font-size: 1.5rem; 
+
+}
+#semester{
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    outline: none;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    transform: translateY(-1px);
+    color: var(--font-color);
+}
+.get-btn-container input{
+    position: absolute;
+    background-color:#18ac31;
+    color: white;
+    transform: translate(100%);
+    border: none;
+    padding:5px 1%;
+    border-radius: 5px;
+}
+.get-btn-container input:hover{
+    background-color:#14a02b;   
+   }
+   .get-btn-container input:active{
+       background-color:#117b22; 
+   }
+.result-table-container{
+    height: 60%;
+    background-color: white;
+    width: 80%;
+    margin:3% auto;
+    border-radius: 20px;
+    padding: 2px;
+}
+.result-table{
+    width: 100%;
+    height: 100%;
+    text-align:center;
+    font-size: 1.3rem;
+    overflow: hidden;
+}
+.result-table td , th{
+    font-weight: lighter;
+    overflow: hidden;
+}
+.sub{
+    width: 50%;
+    text-align:start;
+    padding-left:10%;
+}
+.result-table th{
+    background-color: rgba(149, 140, 140, 0.125);
+    margin: 1%;
+    height: 3%;
+}
+.col-text-box{
+    text-align: center;
+    height: 80%;
+    width: 80%;
+    font-size: 1.3rem;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    outline: none;
+}
+.col-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:130px;
+    height: 65px;
+}
+.save-btn-container{
+    margin-top: 2%;
+    width: 99%;
+    display: flex;
+    justify-content: end;
+}
+.save-btn-container input{
+    padding: 1.5% 5%;
+    background-color:#18ac31;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+.save-btn-container input:hover{
+ background-color:#14a02b;   
+}
+.save-btn-container input:active{
+    background-color:#117b22; 
+}
+.review-heading{
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: white;
+}
+.review-box{
+    display: flex;
+    justify-content: center;
+}
+.review-box textarea{
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    padding: 10px;
+    font-size: 1.5rem;
+    width: 60%;
+}
