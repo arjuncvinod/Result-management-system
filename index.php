@@ -15,11 +15,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/eabac940d1.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="myFunction()">
+<!-- -----------------------loading animation--------------- -->
+
+
+<?php 
+include("loading.html")
+?>
+
+<!-- ------------------------------------------------------- -->
+
+<main id="myDiv">
+
     <!-----------------------------navbar--------------------------->
     <div class="nav-container">
         <nav class="nav-bar">
-        <span class="logo" >SVHSS</span>
+        <span class="logo-home" ><img class="logo-img" src="images/logo.JPG" alt=""></span>
         <div class="links"> 
             <a href="#home" class="link-text">Home</a>
             <a href="login.php" class="link-text">login</a>
@@ -38,7 +49,6 @@
                     <h3>
                         Examination <br>
                         <span class="result-text">Results
-                <!----<span>R</span><span>E</span><span>S</span><span>U</span><span>L</span><span>T</span><span>S</span>--->
                         </span>
                     </h3>
                 </p>
@@ -96,6 +106,6 @@
             </div>
         </div>
     </div>
-    
+</main>
 </body>
 </html>

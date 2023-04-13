@@ -2,23 +2,19 @@
 session_start();
 if(!isset($_SESSION['login']))  
 {
-echo "<h1 style=text-align:center;font-size:70px;>Session Expired :(</h1>
-<p style=text-align:center;><a href='login.php'>Go to Login</a></p>";
-// header("location:login.php");
+    header("location:session-expired.php");
     
 }
 else
 if(!(($_SESSION['login']=="student") || ($_SESSION['login']=="admin")))
 {
-    echo "<h1 style=text-align:center;font-size:70px;>Session Expired :(</h1>
-    <p style=text-align:center;><a href='login.php'>Go to Login</a></p>";
-    // header("location:login.php");
+    header("location:session-expired.php");
 }
 else
 if(!($_SESSION['username']==$_REQUEST['r'])){
-    echo "<h1 style=text-align:center;font-size:70px;>Session Expired :(</h1>
-    <p style=text-align:center;><a href='login.php'>Go to Login</a></p>"; 
+     header("location:session-expired.php");
 }
+
 else
 {
 ?>
@@ -28,7 +24,7 @@ else
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Result</title>
     <link rel="stylesheet" href="home-style.css">
     <link rel="stylesheet" href="student-result.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -126,6 +122,7 @@ else
                     </tr>
                     <tr> 
                         <td class="sub">C++</td>
+                        
                         <td><input type="text" value="<?php echo $row['mark1'];?>" class="col-text-box" name="m1" readonly> </td>
                         <td><input type="text" value="100" class="col-text-box"readonly></td>
                         <td><p class="col-text"><?php grade($row['mark1']);?></p></td>

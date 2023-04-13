@@ -14,12 +14,6 @@ body{
     height:100%;
     margin-top: 70px;
 }
-/* .video-bg{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-} */
 .form-container{
     display: flex;
     flex-direction: column;
@@ -41,6 +35,15 @@ body{
     color: var(--ui-color);
 }
 .reg-form input[type=text]{
+    margin-bottom: 2%;
+    height:5%;
+    width: 25vw;
+    outline:none ;
+    border: 1px solid rgb(213, 213, 213);
+    border-radius: 3px;
+    
+}
+.reg-form input[type=email]{
     margin-bottom: 2%;
     height:5%;
     width: 25vw;

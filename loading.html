@@ -1,0 +1,18 @@
+ <div class="loader-container" id="loader">
+      <div class="loader">
+        <div class="dot a"></div>
+        <div class="dot b"></div>
+        <div class="dot c"></div>
+      </div>
+    </div>
+        <script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+}
+</script>

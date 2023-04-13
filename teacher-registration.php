@@ -2,17 +2,13 @@
 session_start();
 if(!isset($_SESSION['login']))  
 {
-echo "<h1 style=text-align:center;font-size:70px;>Session Expired :(</h1>
-<p style=text-align:center;><a href='login.php'>Go to Login</a></p>";
-// header("location:login.php");
+    header("location:session-expired.php");
     
 }
 else
 if($_SESSION['login']!="admin")
 {
-    echo "<h1 style=text-align:center;font-size:70px;>Session Expired :(</h1>
-    <p style=text-align:center;><a href='login.php'>Go to Login</a></p>";
-    // header("location:login.php");
+    header("location:session-expired.php");
 }
 else{
 ?>
@@ -21,7 +17,7 @@ else{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register</title>
     <link rel="stylesheet" href="home-style.css">
     <link rel="stylesheet" href="student-reg.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +34,7 @@ else{
         .reg-form{
             height:50%;
         }
-        .reg-form input[type=text]{
+        .reg-form input[type=text], .reg-form input[type=email]{
             height:10%;
         }
     </style>
@@ -55,18 +51,16 @@ else{
     </nav>
  <!-- student registration section -->
  <div id="registration"> 
-    <!-- <video autoplay loop muted plays-inline class="video-bg">
-        <source src="BG.mp4" type="video/mp4"> -->
     </video>
 <div class="form-container">
     <br>
     <form action="" method="post" class="reg-form" >
         <!-- onsubmit="sendEmail(); reset(); return false;" -->
         <h1>Teacher Registration</h1>
-       <span class="text-box-text">Teacher Name</span> <input type="text" name="tname">
-       <span class="text-box-text"> Teacher Email</span> <input type="text" name="temail">
-       <span class="text-box-text"> Teacher Password</span> <input type="text" name="tpassword" >
-       <p class="reg-button-container" ><input type="submit" value="Register" class="reg-button" name="reg"> </p>
+       <span class="text-box-text">Teacher Name</span> <input type="text" name="tname" required>
+       <span class="text-box-text"> Teacher Email</span> <input type="email" name="temail" required>
+       <span class="text-box-text"> Teacher Password</span> <input type="text" name="tpassword" required >
+       <p class="reg-button-container" ><input type="submit" value="Register" class="reg-button" name="reg" required> </p>
    
 </form>
 </div>

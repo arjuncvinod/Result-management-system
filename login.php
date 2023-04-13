@@ -3,11 +3,13 @@ session_start();
 ?>
 <html>
     <head>
-        <link rel="stylesheet" href="form-style.css">
-        <link rel="stylesheet" href="home-style.css">
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="form-style.css">
+        <link rel="stylesheet" href="home-style.css">
+        <title>Login</title>
     </head>
     <body>
         <div class="nav-container">
@@ -153,7 +155,7 @@ session_start();
         }
         else
         {
-            echo "<script> alert('Incorrect Username or Password') </script>"  ;      
+            echo "<script> alert('Incorrect username or password ! ')</script>" ;      
         }
      
     }

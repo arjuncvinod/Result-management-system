@@ -2,17 +2,13 @@
 session_start();
 if(!isset($_SESSION['login']))  
 {
-echo "<h1 style=text-align:center;font-size:70px;>Session Expired :(</h1>
-<p style=text-align:center;><a href='login.php'>Go to Login</a></p>";
-// header("location:login.php");
+    header("location:session-expired.php");
     
 }
 else
 if(!(($_SESSION['login']=="parent") || ($_SESSION['login']=="admin")))
 {
-    echo "<h1 style=text-align:center;font-size:70px;>Session Expired :(</h1>
-    <p style=text-align:center;><a href='login.php'>Go to Login</a></p>";
-    // header("location:login.php");
+    header("location:session-expired.php");
 }
 else
 if(!($_SESSION['username']==$_REQUEST['r'])){
@@ -27,7 +23,7 @@ else{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Result</title>
     <link rel="stylesheet" href="home-style.css">
     <link rel="stylesheet" href="student-result.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -2,17 +2,13 @@
 session_start();
 if(!isset($_SESSION['login']))  
 {
-echo "<h1 style=text-align:center;font-size:70px;>Session Expired :(</h1>
-<p style=text-align:center;><a href='login.php'>Go to Login</a></p>";
-// header("location:login.php");
+    header("location:session-expired.php");
     
 }
 else
 if(!(($_SESSION['login']=="teacher") || ($_SESSION['login']=="admin")))
 {
-    echo "<h1 style=text-align:center;font-size:70px;>Session Expired :(</h1>
-    <p style=text-align:center;><a href='login.php'>Go to Login</a></p>";
-    // header("location:login.php");
+    header("location:session-expired.php");
 }
 else{
 ?>
@@ -22,7 +18,7 @@ else{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit result</title>
     <link rel="stylesheet" href="home-style.css">
     <link rel="stylesheet" href="student-result.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -121,25 +117,25 @@ else{
                     </tr>
                     <tr> 
                         <td class="sub">C++</td>
-                        <td><input type="text" value="<?php echo $row['mark1'];?>" class="col-text-box" name="m1"> </td>
+                        <td><input type="number" value="<?php echo $row['mark1'];?>" class="col-text-box" name="m1" min="0" max="100"> </td>
                         <td><input type="text" value="100" class="col-text-box"readonly></td>
                         <td><p class="col-text"><?php grade($row['mark1']);?></p></td>
                     </tr>
                     <tr>
                         <td class="sub">Java</td>
-                        <td><input type="text" value="<?php echo $row['mark2'];?>" class="col-text-box" name="m2"></td>
+                        <td><input type="number" value="<?php echo $row['mark2'];?>" class="col-text-box" name="m2" min="0" max="100"></td>
                         <td><input type="text" value="100" class="col-text-box" readonly></td>
                         <td><p class="col-text"><?php grade($row['mark2']);?></p></td>
                     </tr>
                     <tr>
                         <td class="sub">Linux</td>
-                        <td><input type="text" value="<?php echo $row['mark3'];?>" class="col-text-box" name="m3"></td>
+                        <td><input type="number" value="<?php echo $row['mark3'];?>" class="col-text-box" name="m3" min="0" max="100"></td>
                         <td><input type="text" value="100" class="col-text-box" readonly></td>
                         <td><p class="col-text"><?php grade($row['mark3']);?></p></td>
                     </tr>
                     <tr>
                         <td class="sub">PHP</td>
-                        <td><input type="text" value="<?php echo $row['mark4'];?>" class="col-text-box" name="m4" ></td>
+                        <td><input type="number" value="<?php echo $row['mark4'];?>" class="col-text-box" name="m4" min="0" max="100"></td>
                         <td><input type="text" value="100" class="col-text-box" readonly></td>
                         <td><p class="col-text"><?php grade($row['mark4']);}?></p></td>
                     </tr>
